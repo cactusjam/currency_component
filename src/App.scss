@@ -1,0 +1,140 @@
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.grid {
+  border: 1px solid #a3a3a3;
+  padding: 0;
+  border-radius: 5px;
+  max-width: 400px;
+  height: fit-content;
+  margin: auto;
+}
+
+.grid_currencies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.grid_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  flex: 0 0 30%;
+}
+
+.grid_selected {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+
+.checkmark {
+  height: 16px;
+  width: 16px;
+  border: 1px solid #a3a3a3;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 5px;
+}
+
+.currency input:checked ~ .checkmark:before {
+  display: block;
+}
+
+.checkmark:before {
+  position: absolute;
+  display: none;
+  content: "\00d7";
+  color: red;
+  font-weight: bold;
+  top: -2px;
+  width: 5px;
+  height: 10px;
+  left: 3px;
+}
+
+.currency {
+  position: relative;
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #a3a3a3;
+}
+
+.currency_selected {
+  background-color: white;
+}
+.currency_container {
+  background-color: #ececec;
+  &:hover {
+    background-color: #c6c6c6;
+  }
+}
+
+.grid_container {
+  position: relative;
+  background-color: #e5e5e5;
+  margin: 0;
+  padding: 5px;
+  height: 100%;
+  justify-content: center;
+  width: 80%;
+  display: flex;
+}
+
+.currency-container span {
+  font-size: 2.2vh;
+  margin: 0 0.5vh;
+  color: #104371;
+}
+
+.grid_closedBtn {
+  position: absolute;
+  right: -1vh;
+  top: -1vh;
+  cursor: pointer;
+  border-radius: 99px;
+  background-color: #000;
+  font-size: 1.8vh;
+  line-height: 0px;
+  height: 16px;
+  width: 16px;
+  padding: 0;
+  border-width: 0;
+
+  &:hover {
+    background-color: white;
+    border: 2px solid #000;
+
+    &:before {
+      color: #000;
+    }
+  }
+}
+
+.grid_closedBtn:before {
+  content: "X";
+  color: white;
+  font-size: 10px;
+}
