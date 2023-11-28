@@ -1,5 +1,7 @@
 # currency-selector
 
+https://master--graceful-sherbet-93034c.netlify.app/
+
 ## Project setup
 
 In the project directory, you can run:
